@@ -28,7 +28,7 @@ target("gitmsg")
     set_kind("shared")
 
     -- add files
-    add_files("src/gitmsg.c") 
+    add_files("src/gitmsg.c", "src/gitapi/gitapi.c", "src/utils/repoinfo.c") 
 
     add_linkdirs("/usr/local/lib")
     add_links("git2")
@@ -49,6 +49,9 @@ target("gitmsg_test")
 
     -- add links
     add_links("gitmsg")
+    add_linkdirs("/usr/local/lib")
+    add_links("git2")
+
 
     -- add link directory
     add_linkdirs("$(buildir)")

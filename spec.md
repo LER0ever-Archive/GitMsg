@@ -1,0 +1,1 @@
+# GitMessage Spec
